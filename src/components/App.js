@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
-import AppRouter from 'components/Router';
-import { authService } from 'fbase';
+import React, { useState } from "react";
+import AppRouter from "components/Router";
+import { authService } from "fbase";
 
 function App() {
-  console.log("authService.currentUser:"+authService.currentUser);
-  const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser)
+  const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
+  console.log("authService.currentUser:" + authService.currentUser);
+  setInterval(() => {
+    console.log(authService.currentUser);
+  }, 2000);
   return (
     <>
       <AppRouter isLoggedIn={isLoggedIn} />
