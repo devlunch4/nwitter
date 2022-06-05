@@ -1,7 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from 'components/App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "components/App";
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -9,7 +8,6 @@ import App from 'components/App';
 //     <App />
 //   </React.StrictMode>
 // );
-
 
 ReactDOM.render(
   <React.StrictMode>

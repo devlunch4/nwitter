@@ -5,7 +5,7 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newAccount, setNewAccount] = useState(true);
-  const [error, setError] = useState("")
+  const [error, setError] = useState("");
   const onChange = (event) => {
     //console.log(event.target.name);
     const {
@@ -17,7 +17,7 @@ const Auth = () => {
     } else if (name === "password") {
       setPassword(value);
     }
-  };
+  }; 
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -42,7 +42,9 @@ const Auth = () => {
   // for provider: login with google, github.
   const onSocialClick = async (event) => {
     // console.log(event.target.name);
-    const { target: { name }, } = event;
+    const {
+      target: { name },
+    } = event;
     let provider;
     if (name === "google") {
       console.log("google login provider");
@@ -50,10 +52,10 @@ const Auth = () => {
     } else if (name === "github") {
       console.log("github login provider");
       provider = new firebaseInstance.auth.GithubAuthProvider();
-    } 
+    }
     const data = await authService.signInWithPopup(provider);
     console.log(data);
-  }
+  };
 
   return (
     <div>
@@ -74,13 +76,22 @@ const Auth = () => {
           value={password}
           onChange={onChange}
         />
-        <input type="submit" value={newAccount ? "Create Account" : "Sign In"} />
+        <input
+          type="submit"
+          value={newAccount ? "Create Account" : "Sign In"}
+        />
         {error}
       </form>
-      <span onClick={toggleAccount}>{newAccount ? "Sign In" : "Create Account"}      </span>
+      <span onClick={toggleAccount}>
+        {newAccount ? "Sign In" : "Create Account"}{" "}
+      </span>
       <div>
-        <button onClick={onSocialClick} name="google">Conginue with Github</button>
-        <button onClick={onSocialClick} name="github">Conginue with Google</button>
+        <button onClick={onSocialClick} name="google">
+          Conginue with Github
+        </button>
+        <button onClick={onSocialClick} name="github">
+          Conginue with Google
+        </button>
       </div>
     </div>
   );
