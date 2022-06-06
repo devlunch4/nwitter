@@ -1,10 +1,17 @@
-import { type } from "@testing-library/user-event/dist/type";
+// import { type } from "@testing-library/user-event/dist/type";
 import React, { useState } from "react";
+
+import { dbService } from "fbase";
 
 const Home = () => {
   const [nweet, setNweet] = useState("");
-  const onSubmit = (event) => {
+  const onSubmit = async  (event) => {
     event.preventDefauit();
+    await  dbService.collection("nweets").add({
+      nweet,
+      createdAt: Date.now(),
+    });
+    setNweet("");
   };
   const onChange = (event) => {
     const {
