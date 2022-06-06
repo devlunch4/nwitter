@@ -87,10 +87,10 @@ const Auth = () => {
       </span>
       <div>
         <button onClick={onSocialClick} name="google">
-          Conginue with Github
+          Conginue with Google
         </button>
         <button onClick={onSocialClick} name="github">
-          Conginue with Google
+          Conginue with Github
         </button>
       </div>
     </div>
