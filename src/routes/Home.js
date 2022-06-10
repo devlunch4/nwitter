@@ -1,13 +1,28 @@
 // import { type } from "@testing-library/user-event/dist/type";
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import { dbService } from "fbase";
+import { doc } from "firebase/firestore";
 
 const Home = () => {
   const [nweet, setNweet] = useState("");
-  const onSubmit = async  (event) => {
+  const [nweets, setNweets] = useState([]);
+  const getNweets = async () => {
+    const dbNweets = await dbService.collection("nweets").get();
+    //console.log("dbNweets" + dbNweets);
+    dbNweets.forEach((document) => {
+      const nweetobject={
+        ...document.data(),
+        id: document.id,
+      };
+      setNweets((prev) => [nweetobject, ...prev]);
+    });
+  };
+  useEffect(() => {
+    getNweets();
+  }, []);
+  const onSubmit = async (event) => {
     event.preventDefault();
-    await  dbService.collection("nweets").add({
+    await dbService.collection("nweets").add({
       nweet,
       createdAt: Date.now(),
     });
@@ -18,6 +33,7 @@ const Home = () => {
       target: { value },
     } = event;
     setNweet(value);
+    console.log(nweets);
   };
   return (
     <div>
@@ -31,6 +47,13 @@ const Home = () => {
         />
         <input type="submit" value="Nweet" />
       </form>
+      <div>
+        {nweets.map((nweet) => (
+          <div key={nweet.id}>
+            <h4>{nweet.nweet}</h4>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
