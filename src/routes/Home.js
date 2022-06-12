@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { dbService } from "fbase";
 import Nweet from "components/Nweet";
 //import { doc } from "firebase/firestore";
-//import { doc } from "firebase/firestore";
 
 const Home = ({ userObj }) => {
   // console.log(userObj);
@@ -32,7 +31,20 @@ const Home = ({ userObj }) => {
       target: { value },
     } = event;
     setNweet(value);
-    console.log(nweets);
+    // console.log(nweets);
+  };
+  const onFileChange = (event) => {
+    // console.log(event.target.files);
+    const {
+      target: { files },
+    } = event;
+    const theFile = files[0];
+    // console.log(theFile);
+    const reader = new FileReader();
+    reader.onloadend = (finishedEvent) => {
+      console.log(finishedEvent);
+    };
+    reader.readAsDataURL(theFile);
   };
   return (
     <div>
@@ -44,6 +56,7 @@ const Home = ({ userObj }) => {
           placeholder="What's on your mind?"
           maxLength={120}
         />
+        <input type="file" accept="image/*" onChange={onFileChange} />
         <input type="submit" value="Nweet" />
       </form>
       <div>
