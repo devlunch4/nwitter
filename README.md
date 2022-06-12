@@ -86,4 +86,20 @@ $ npm i react-router-dom@5.3.0
 $ npx create-react-app nwitter
 
 +npm install react react-dom
+
+
+#4.2 Uploading
+* $npm install uuid
+* Firebase Storage Rule need Modified value:
+<<<<<<<<
+rules_version = '2';
+service firebase.storage {
+match /b/{bucket}/o {
+match /{allPaths=**} {
+allow read, write: if request.auth != null;
+}
+}
+}
+>>>>>>>
+
 #######################################################
