@@ -6,7 +6,7 @@ import Nweet from "components/Nweet";
 //import { doc } from "firebase/firestore";
 
 const Home = ({ userObj }) => {
-  console.log(userObj);
+  // console.log(userObj);
   const [nweet, setNweet] = useState("");
   const [nweets, setNweets] = useState([]);
   useEffect(() => {
