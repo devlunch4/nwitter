@@ -13,12 +13,14 @@ const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
       <Switch>
         {isLoggedIn ? (
           <>
-            <Route exact path="/">
+            <Route exact path="/" >
               <Home userObj={userObj} />
             </Route>
             <Route exact path="/profile">
               <Profile userObj={userObj} refreshUser={refreshUser} />
             </Route>
+            
+            
           </>
         ) : (
           <>
@@ -34,3 +36,5 @@ const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
 };
 
 export default AppRouter;
+// https://gist.github.com/mjackson/b5748add2795ce7448a366ae8f8ae3bb
+// <Redirect from="*" to="/profile" />
