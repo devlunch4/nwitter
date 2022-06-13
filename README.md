@@ -120,4 +120,7 @@ $ npm run depoly
 
 Link Check;
 https://devlunch4.github.io/nwitter
+
+#6.3 Security on Firebase
+https://console.firebase.google.com/
 #######################################################
