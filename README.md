@@ -102,4 +102,13 @@ allow read, write: if request.auth != null;
 }
 >>>>>>>
 
+#6.1 Styles
+$ npm i @fortawesome/fontawesome-free
+$ npm i @fortawesome/free-brands-svg-icons
+$ npm i @fortawesome/free-solid-svg-icons
+
+$ npm i --save @fortawesome/fontawesome-free
+$ npm i --save @fortawesome/free-brands-svg-icons
+$ npm i --save @fortawesome/free-solid-svg-icons
+
 #######################################################

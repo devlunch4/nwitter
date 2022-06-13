@@ -1,8 +1,8 @@
 import React from "react";
 //import ReactDOM from "react-dom/client"; // react18
-import  ReactDOM from "react-dom"; // react17
+import ReactDOM from "react-dom"; // react17
 import App from "components/App";
-
+import "./styles.css";
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -18,7 +18,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
 
 // https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
 /* How to downgrade React version 18 to 17?
