@@ -111,4 +111,13 @@ $ npm i --save @fortawesome/fontawesome-free
 $ npm i --save @fortawesome/free-brands-svg-icons
 $ npm i --save @fortawesome/free-solid-svg-icons
 
+#6.2 Deploying
+$ npm i gh-pages
+- set package json
+$ npm run build
+- delete build Folder (x)
+$ npm run depoly
+
+Link Check;
+https://devlunch4.github.io/nwitter
 #######################################################
