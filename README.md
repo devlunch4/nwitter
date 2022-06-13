@@ -123,4 +123,7 @@ https://devlunch4.github.io/nwitter
 
 #6.3 Security on Firebase
 https://console.firebase.google.com/
+
+#6.4 API Key Security
+https://console.developers.google.com/apis/credentials
 #######################################################
