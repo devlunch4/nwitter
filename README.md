@@ -102,36 +102,36 @@ allow read, write: if request.auth != null;
 }
 >>>>>>>
 
-#6.1 Styles
-$ npm i @fortawesome/fontawesome-free
-$ npm i @fortawesome/free-brands-svg-icons
-$ npm i @fortawesome/free-solid-svg-icons
+#6.1 Styles  
+$ npm i @fortawesome/fontawesome-free  
+$ npm i @fortawesome/free-brands-svg-icons  
+$ npm i @fortawesome/free-solid-svg-icons  
 
-$ npm i --save @fortawesome/fontawesome-free
-$ npm i --save @fortawesome/free-brands-svg-icons
-$ npm i --save @fortawesome/free-solid-svg-icons
+$ npm i --save @fortawesome/fontawesome-free  
+$ npm i --save @fortawesome/free-brands-svg-icons  
+$ npm i --save @fortawesome/free-solid-svg-icons  
 
-#6.2 Deploying
-$ npm i gh-pages
-- set package json
-$ npm run build
-- delete build Folder (x)
-$ npm run depoly
+#6.2 Deploying  
+$ npm i gh-pages  
+- set package json  
+$ npm run build  
+- delete build Folder (x)  
+$ npm run depoly  
 
-Link Check;
+Link Check;  
 https://devlunch4.github.io/nwitter
 
-#6.3 Security on Firebase
+#6.3 Security on Firebase  
 https://console.firebase.google.com/
 
-#6.4 API Key Security
+#6.4 API Key Security  
 https://console.developers.google.com/apis/credentials
 
 # fixed Security Dependabot alerts 
-npm i node-fetch@2.6.7
-npm i nth-check@2.0.1
-npm i --save node-fetch@2.6.7
-npm i --save nth-check@2.0.1
+npm i node-fetch@2.6.7  
+npm i nth-check@2.0.1  
+npm i --save node-fetch@2.6.7  
+npm i --save nth-check@2.0.1  
 
 
 #######################################################
