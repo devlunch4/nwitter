@@ -126,4 +126,12 @@ https://console.firebase.google.com/
 
 #6.4 API Key Security
 https://console.developers.google.com/apis/credentials
+
+# fixed Security Dependabot alerts 
+npm i node-fetch@2.6.7
+npm i nth-check@2.0.1
+npm i --save node-fetch@2.6.7
+npm i --save nth-check@2.0.1
+
+
 #######################################################
