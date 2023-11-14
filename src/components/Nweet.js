@@ -62,7 +62,7 @@ const Nweet = ({ nweetObj, isOwner }) => {
           {nweetObj.attachmentUrl && <img src={nweetObj.attachmentUrl} alt="nweetObj.attachmentUrl"/>}
           {isOwner && (
             <div className="nweet__actions">
-              @devlunch4 Reply…
+              @devlunch4
               <span onClick={onDeleteClick}>
                 <FontAwesomeIcon icon={faTrash} />
               </span>
