@@ -127,26 +127,11 @@ https://console.firebase.google.com/
 https://console.developers.google.com/apis/credentials
 
 # fixed Security Dependabot alerts 
-<<<<<<< HEAD
 npm i node-fetch@2.6.7  
 npm i nth-check@2.0.1  
 npm i --save node-fetch@2.6.7  
 npm i --save nth-check@2.0.1  
 
 
-#######################################################
 
 20230420 dependaBot Merged this repo... And web was not work..
-=======
-<<<<<<< HEAD
-npm i node-fetch@2.6.7
-npm i nth-check@2.0.1
-npm i --save node-fetch@2.6.7
-npm i --save nth-check@2.0.1
-
-
-
-
-20230420 dependaBot Merged this repo... And web was not work..
-a4c3a96c083505bea08cb71b0e26cf0b3d0a8661
->>>>>>> master
